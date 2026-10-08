@@ -128,3 +128,23 @@ canvas {
     right: 18px;
   }
 }
+/* ===== Dar ekran: alt paneller kesilmesin, alt alta sarılsın ===== */
+@media (max-width: 1100px) {
+  .info-panel,
+  .controls-hint {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.6;
+    border-radius: 16px;
+    left: 18px;
+    right: 18px;
+    max-width: none;
+  }
+  .info-panel {
+    bottom: 84px;
+  }
+  .stats-panel {
+    bottom: 160px;
+  }
+}
