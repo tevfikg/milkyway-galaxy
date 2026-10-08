@@ -547,9 +547,15 @@ animateScene();
 // --- Resize handler ---
 window.addEventListener("resize", onWindowResize, false);
 function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  camera.aspect = width / height;
   camera.updateProjectionMatrix();
-  effectComposer.setSize(window.innerWidth, window.innerHeight);
+
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(width, height);
+  effectComposer.setSize(width, height);
 }
 
 // Small star counter update (display)
