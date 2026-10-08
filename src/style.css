@@ -115,3 +115,16 @@ canvas {
     text-overflow: ellipsis;
   }
 }
+/* ===== Dar ekran: başlık ve FPS paneli çakışmasın ===== */
+@media (max-width: 1100px) {
+  .badge {
+    right: 18px;
+    white-space: normal;
+    line-height: 1.6;
+  }
+  .stats-panel {
+    top: auto;
+    bottom: 120px;
+    right: 18px;
+  }
+}
